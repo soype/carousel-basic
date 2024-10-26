@@ -3,7 +3,7 @@
 client_id = "2d3850bb4adf3d5998a7e342779c18c1"
 name = "carousel-basic"
 handle = "carousel-basic"
-application_url = "https://shepherd-structural-banners-aids.trycloudflare.com"
+application_url = "https://roulette-wav-booking-camp.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://shepherd-structural-banners-aids.trycloudflare.com/auth/callback",
-  "https://shepherd-structural-banners-aids.trycloudflare.com/auth/shopify/callback",
-  "https://shepherd-structural-banners-aids.trycloudflare.com/api/auth/callback"
+  "https://roulette-wav-booking-camp.trycloudflare.com/auth/callback",
+  "https://roulette-wav-booking-camp.trycloudflare.com/auth/shopify/callback",
+  "https://roulette-wav-booking-camp.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
