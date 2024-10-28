@@ -14,12 +14,12 @@ import { useState } from "react";
 import { json } from "@remix-run/node";
 import { useLoaderData, Form } from "@remix-run/react";
 
+// Import Primsa DB
+import db from "../db.server";
+
 export async function loader() {
   // Get data from database
-  let settings = {
-    name: "App name",
-    description: "App description",
-  };
+  let settings = await db.settings.findFirst();
 
   return json(settings);
 }
@@ -28,6 +28,23 @@ export async function action({request}) {
   // Update data in database
   let settings = await request.formData();
   settings = Object.fromEntries(settings);
+
+  await db.settings.upsert({
+    where: {
+      id: '1',
+    },
+    update: {
+      id: '1',
+      name: settings.name,
+      description: settings.description,
+    },
+    create: {
+      id: '1',
+      name: settings.name,
+      description: settings.description,
+    }
+  })
+
   return json(settings);
 }
 
@@ -70,7 +87,7 @@ export default function SettingsPage() {
                 <TextField
                   name="name"
                   label="App name"
-                  value={formState.name}
+                  value={formState?.name}
                   onChange={(value) =>
                     setFormState({ ...formState, name: value })
                   }
@@ -78,7 +95,7 @@ export default function SettingsPage() {
                 <TextField
                   name="description"
                   label="Description"
-                  value={formState.description}
+                  value={formState?.description}
                   onChange={(value) =>
                     setFormState({ ...formState, description: value })
                   }
