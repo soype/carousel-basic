@@ -3,7 +3,7 @@
 client_id = "2d3850bb4adf3d5998a7e342779c18c1"
 name = "carousel-basic"
 handle = "carousel-basic"
-application_url = "https://oldest-worst-advance-fees.trycloudflare.com"
+application_url = "https://tommy-finger-chemistry-codes.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://oldest-worst-advance-fees.trycloudflare.com/auth/callback",
-  "https://oldest-worst-advance-fees.trycloudflare.com/auth/shopify/callback",
-  "https://oldest-worst-advance-fees.trycloudflare.com/api/auth/callback"
+  "https://tommy-finger-chemistry-codes.trycloudflare.com/auth/callback",
+  "https://tommy-finger-chemistry-codes.trycloudflare.com/auth/shopify/callback",
+  "https://tommy-finger-chemistry-codes.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

@@ -10,6 +10,43 @@ import {
   TextField,
 } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
+import { useLoaderData, Form } from "@remix-run/react";
+
+// Import Primsa DB
+import db from "../db.server";
+
+export async function loader() {
+  // Get data from database
+  let carousels = await db.carousel.findMany();
+
+  return json(carousels);
+}
+
+export async function action({request}) {
+  // Update data in database
+  let carousel = await request.formData();
+  carousel = Object.fromEntries(carousel);
+
+  await db.carousel.upsert({
+    where: {
+      id: '1',
+    },
+    update: {
+      id: '1',
+      name: carousel.name,
+      quantity: carousel.quantity,
+      productId: carousel.productId,
+    },
+    create: {
+      id: '1',
+      name: carousel.name,
+      quantity: carousel.quantity,
+      productId: carousel.productId,
+    }
+  })
+
+  return json(carousel);
+}
 
 export default function CarouselPage() {
   return (
@@ -36,6 +73,7 @@ export default function CarouselPage() {
               <Form method="POST">
                 <TextField name="name" label="Carousel name" />
                 <TextField name="quantity" label="Number of images" type="number" />
+                <TextField name="productId" label="Product ID" />
                 <Button submit="true">Save</Button>
               </Form>
             </BlockStack>

@@ -36,3 +36,11 @@ model Settings {
   name        String
   description String?
 }
+
+model Carousel {
+  id          String    @id
+  name        String
+  quantity    Int
+  productId   BigInt
+  
+}

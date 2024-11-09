@@ -2,8 +2,8 @@ import { json } from "@remix-run/node";
 
 export async function loader() {
   return json({
-    title: "Wishlist",
-    description: "Wishlist page",
+    title: "Carousel",
+    description: "Carousel page",
   });
 }
 
