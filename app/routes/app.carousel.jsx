@@ -10,7 +10,7 @@ import {
   TextField,
 } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
-import { useLoaderData, Form } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 
 // Import Primsa DB
 import db from "../db.server";

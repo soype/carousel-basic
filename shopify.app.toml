@@ -3,7 +3,7 @@
 client_id = "2d3850bb4adf3d5998a7e342779c18c1"
 name = "carousel-basic"
 handle = "carousel-basic"
-application_url = "https://tommy-finger-chemistry-codes.trycloudflare.com"
+application_url = "https://tampa-boulevard-competitive-serve.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://tommy-finger-chemistry-codes.trycloudflare.com/auth/callback",
-  "https://tommy-finger-chemistry-codes.trycloudflare.com/auth/shopify/callback",
-  "https://tommy-finger-chemistry-codes.trycloudflare.com/api/auth/callback"
+  "https://tampa-boulevard-competitive-serve.trycloudflare.com/auth/callback",
+  "https://tampa-boulevard-competitive-serve.trycloudflare.com/auth/shopify/callback",
+  "https://tampa-boulevard-competitive-serve.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
